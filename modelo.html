@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento de Alta Performance</title>
+    <link rel="stylesheet" href="css/modelo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="image/887339b9-7e7a-482a-a5e2-1f5a8910b4a5.jpg" alt="Ciclistas em ação">
+            <h1>TREINAMENTO <br> DE ALTA PERFORMANCE</h1>
+        </div>
+        <div class="content">
+            <div class="form-section">
+                <p>Informe a Frequência Cardíaca média do teste de campo no quadro abaixo:</p>
+                <input type="number" id="heartRateInput" class="input-box" value="170" onchange="updateZones()">
+            </div>
+            <div class="zones">
+                <div id="zone1" class="zone" style="background-color: #76c7c0;">Zona 1: 0 até 139</div>
+                <div id="zone2" class="zone" style="background-color: #a4de83;">Zona 2: 141 até 151</div>
+                <div id="zone3" class="zone" style="background-color: #f9e79f;">Zona 3: 153 até 158</div>
+                <div id="zone4" class="zone" style="background-color: #e74c3c;">Zona 4: 160 até 179</div>
+                <div id="zone5" class="zone" style="background-color: #e377b1;">Zona 5: 180 acima.</div>
+            </div>
+        </div>
+    </div>
+    <script src="javaScript/modelo.js"></script>
+</body>
+</html>
+

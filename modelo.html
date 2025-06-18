@@ -15,7 +15,8 @@
         <div class="content">
             <div class="form-section">
                 <p>Informe a Frequência Cardíaca média do teste de campo no quadro abaixo:</p>
-                <input type="number" id="heartRateInput" class="input-box" value="170" onchange="updateZones()">
+                <input type="number" id="heartRateInput" class="input-box" value="170" min="1" onchange="handleHeartRateChange()">
+                <p id="warning" class="warning"></p>
             </div>
             <div class="zones">
                 <div id="zone1" class="zone" style="background-color: #76c7c0;">Zona 1: 0 até 139</div>

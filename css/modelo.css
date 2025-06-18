@@ -64,6 +64,12 @@ body {
     outline: none;
 }
 
+.warning {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 5px;
+}
+
 .zones {
     width: 100%;
 }

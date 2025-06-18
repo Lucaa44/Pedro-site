@@ -1,6 +1,20 @@
 function updateZones() {
-    const heartRate = parseInt(document.getElementById('heartRateInput').value);
-    
+    const input = document.getElementById('heartRateInput');
+    const heartRate = parseInt(input.value, 10);
+    const warning = document.getElementById('warning');
+
+    if (isNaN(heartRate) || heartRate < 1) {
+        warning.textContent = 'Por favor, insira um valor válido.';
+        document.getElementById('zone1').innerText = 'Zona 1: -';
+        document.getElementById('zone2').innerText = 'Zona 2: -';
+        document.getElementById('zone3').innerText = 'Zona 3: -';
+        document.getElementById('zone4').innerText = 'Zona 4: -';
+        document.getElementById('zone5').innerText = 'Zona 5: -';
+        return;
+    }
+
+    warning.textContent = '';
+
     // Cálculos baseados na porcentagem da média de batimentos cardíacos
     const zone1Max = Math.round(heartRate * 0.82);
     const zone2Min = Math.round(heartRate * 0.83);
@@ -22,3 +36,12 @@ function updateZones() {
 document.addEventListener('DOMContentLoaded', () => {
     updateZones();
 });
+
+function handleHeartRateChange() {
+    const input = document.getElementById('heartRateInput');
+    const value = parseInt(input.value, 10);
+    if (isNaN(value) || value < 1) {
+        input.value = '';
+    }
+    updateZones();
+}

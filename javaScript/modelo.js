@@ -22,3 +22,8 @@ function updateZones() {
 document.addEventListener('DOMContentLoaded', () => {
     updateZones();
 });
+
+// Permite que a função seja usada em testes Node.js
+if (typeof module !== 'undefined') {
+    module.exports = { updateZones };
+}
